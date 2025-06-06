@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequenos Negócios, Grandes Resultados: Como Usar a Inteligência Artificial | Tirando sua Empresa do Papel com IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para a página de artigo */
+        .article-header {
+            padding: 150px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(10, 10, 30, 0.9), rgba(76, 52, 224, 0.8)), url('https://public.youware.com/users-website-assets/prod/786eb2a6-7966-4b6f-a407-4d78c6cd7042/gf7d1eb18e9c380c980b6c984536aed7578425bcec57ea0c182e0e0a630714f4b566cb8ad1032425322474e985baccce52f4ac525ba52fd47ac5f0e6e4dd15122_640.jpg') center/cover;
+            position: relative;
+        }
+        
+        .article-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .article-meta {
+            color: var(--gray-text);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            text-align: left;
+        }
+        
+        .article-content h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: var(--primary-color);
+        }
+        
+        .article-content ul, .article-content ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--gray-text);
+        }
+        
+        .article-image {
+            width: 100%;
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .article-cta {
+            background: linear-gradient(to right, rgba(10, 10, 30, 0.8), rgba(10, 10, 24, 0.6));
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .article-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .article-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--secondary-color);
+        }
+        
+        .back-to-blog span {
+            margin-right: 8px;
+        }
+        
+        .social-share {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .twitter {
+            background-color: #1DA1F2;
+        }
+        
+        .facebook {
+            background-color: #4267B2;
+        }
+        
+        .linkedin {
+            background-color: #0077B5;
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .statistics-box {
+            background: linear-gradient(135deg, rgba(76, 52, 224, 0.1), rgba(245, 171, 53, 0.1));
+            border: 1px solid rgba(76, 52, 224, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .statistics-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            margin-top: 5px;
+        }
+        
+        .emoji-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .emoji-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .emoji-list li:before {
+            content: attr(data-emoji);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .danger-box {
+            background: linear-gradient(135deg, rgba(224, 76, 76, 0.1), rgba(245, 171, 53, 0.1));
+            border: 1px solid rgba(224, 76, 76, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .danger-box h4 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .source-box {
+            background: rgba(76, 52, 224, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .source-box h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .source-list {
+            columns: 2;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .source-list li {
+            margin-bottom: 5px;
+            break-inside: avoid;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .article-content {
+                padding: 40px 15px;
+            }
+            
+            .article-content p, .article-cta p {
+                font-size: 1rem;
+            }
+            
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .article-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .source-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://github.com/nelsonvieiramartins/site_ai/blob/main/logobranca.png?raw=true" alt="AI Workshop Logo">
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#features">Para quem é</a></li>
+                    <li><a href="index.html#workshop">O que vai aprender</a></li>
+                    <li><a href="index.html#about">Quem somos</a></li>
+                    <li><a href="index.html#faq">Dúvidas</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#register">Garantir vaga</a></li>
+                </ul>
+            </nav>
+
+            <div class="cta-buttons">
+                <a href="index.html#register" class="btn-primary">Garantir Vaga</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+            <h1>Pequenos Negócios, Grandes Resultados: Como Usar a Inteligência Artificial</h1>
+            <div class="article-meta">
+                <span>Por Thiago Fagundes</span> | <span>29 de Maio, 2025</span> | <span>15 min de leitura</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="article-content">
+        <a href="index.html#blog" class="back-to-blog"><span>←</span> Voltar para o blog</a>
+        
+        <div class="article-image">
+            <img src="https://public.youware.com/users-website-assets/prod/786eb2a6-7966-4b6f-a407-4d78c6cd7042/gf7d1eb18e9c380c980b6c984536aed7578425bcec57ea0c182e0e0a630714f4b566cb8ad1032425322474e985baccce52f4ac525ba52fd47ac5f0e6e4dd15122_640.jpg" alt="Pequenos Negócios com IA">
+        </div>
+        
+        <p>
+            Você já percebeu como a Inteligência Artificial está mudando tudo — inclusive os pequenos negócios como o seu?
+        </p>
+        
+        <p>
+            Se ainda não começou a usar, está perdendo tempo (e dinheiro). Mas a boa notícia é que nunca foi tão acessível colocar a IA para trabalhar por você.
+        </p>
+        
+        <p>
+            Neste guia direto ao ponto, você vai entender como a IA está transformando o dia a dia dos pequenos empreendedores, quais funções estão sendo substituídas, quais oportunidades estão surgindo e como se adaptar para crescer com inteligência.
+        </p>
+        
+        <h2>🚀 Por que Pequenos Negócios Devem Usar IA Agora</h2>
+        
+        <p>
+            Segundo a Microsoft, 74% das PMEs brasileiras já estão colhendo benefícios com a IA, e 77% dos gestores afirmam que seus processos ficaram mais rápidos. Isso significa que a inteligência artificial deixou de ser "coisa de empresa grande". Ela está acessível, simples de usar — e pode ser o diferencial competitivo do seu negócio.
+        </p>
+        
+        <p>
+            Mas atenção: enquanto uns aproveitam, outros ficam para trás. Quem ignora a IA corre o risco de ser ultrapassado.
+        </p>
+        
+        <h2>⚙️ Como a IA Está Substituindo Tarefas e Funções Comuns</h2>
+        
+        <h3>📂 Tarefas Administrativas</h3>
+        
+        <p>
+            Sabe aquelas funções repetitivas, como lançar dados em planilhas, conferir extratos ou emitir relatórios? Hoje, ferramentas como ContaAzul e ZeroPaper automatizam tudo isso. Resultado: menos tempo perdido e menos erros humanos.
+        </p>
+        
+        <p>Ganhos reais:</p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="⏱️">Até 40% de economia de tempo com tarefas contábeis</li>
+            <li data-emoji="📄">Automatização de pedidos e estoques com IA lendo e-mails e PDFs</li>
+            <li data-emoji="🧠">Liberação da sua equipe (ou do seu tempo) para pensar no que realmente importa: estratégia e crescimento</li>
+        </ul>
+        
+        <h3>💬 Atendimento ao Cliente</h3>
+        
+        <p>
+            Mais de 70% das PMEs já usam chatbots no WhatsApp e Instagram, e eles resolvem até 80% das dúvidas mais comuns.
+        </p>
+        
+        <p>
+            Ou seja: mesmo sem contratar alguém, você pode oferecer atendimento 24/7. E quando o cliente precisar de algo mais complexo, você ou sua equipe entram.
+        </p>
+        
+        <h3>🛍️ Vendas e E-commerce</h3>
+        
+        <p>
+            Se você vende online, essa parte vai te empolgar.
+        </p>
+        
+        <p>
+            Hoje, ferramentas de IA geram descrições de produtos, criam imagens e até campanhas completas. E o melhor: tudo personalizado para cada cliente.
+        </p>
+        
+        <p>Na prática:</p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="📈">Taxa de conversão aumenta até 25%</li>
+            <li data-emoji="😀">Seu cliente sente que a loja é feita pra ele</li>
+            <li data-emoji="💰">Você economiza com redator, designer e tráfego pago mal segmentado</li>
+        </ul>
+        
+        <h2>📈 Benefícios Visíveis da IA para Pequenos Empreendedores</h2>
+        
+        <h3>💸 Redução de Custos</h3>
+        
+        <p>
+            Segundo a Deloitte, PMEs que usam IA já reduziram custos operacionais em 22% em média.
+        </p>
+        
+        <p>Exemplos:</p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="🚚">Algoritmos de logística que economizam até 15% com combustível</li>
+            <li data-emoji="📦">Estoques inteligentes que evitam desperdícios</li>
+            <li data-emoji="☁️">IA na nuvem (como Google Cloud ou AWS) a preços acessíveis</li>
+        </ul>
+        
+        <h3>🎯 Personalização que Vende Mais</h3>
+        
+        <p>
+            Com machine learning, é possível oferecer produtos sob medida para cada cliente. Exemplo: o WooCommerce recomenda produtos com base no que o usuário já viu, aumentando o ticket médio em até 18%.
+        </p>
+        
+        <p>
+            Clínicas menores, por exemplo, melhoraram a retenção de pacientes em 40% usando IA para lembretes automáticos e pós-consulta.
+        </p>
+        
+        <h3>🧠 Decisões Mais Inteligentes</h3>
+        
+        <p>
+            Você já imaginou prever suas vendas com 85% de precisão?
+        </p>
+        
+        <p>
+            Com IA, é possível. PMEs usam dados de comportamento e tendências para:
+        </p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="🔄">Criar promoções certeiras</li>
+            <li data-emoji="💲">Ajustar preços de forma estratégica</li>
+            <li data-emoji="📊">Evitar compras erradas de estoque</li>
+        </ul>
+        
+        <div class="danger-box">
+            <h4>⚠️ Mas Nem Tudo São Flores: Riscos e Desafios</h4>
+            
+            <h3>👥 Funções em Perigo</h3>
+            
+            <p>A automação está substituindo pessoas em tarefas básicas:</p>
+            
+            <ul class="emoji-list">
+                <li data-emoji="🤖">Atendimento automatizado já responde 65% das interações iniciais</li>
+                <li data-emoji="🧮">Ferramentas contábeis fazem 70% do trabalho de um assistente júnior</li>
+                <li data-emoji="📱">Softwares de IA já produzem 80% do conteúdo de redes sociais para pequenas empresas</li>
+            </ul>
+            
+            <p>Se você ou sua equipe fazem tarefas repetitivas, o risco de substituição é real.</p>
+            
+            <h3>❗ Barreiras Éticas e Técnicas</h3>
+            
+            <p>Adotar IA com responsabilidade é essencial.</p>
+            
+            <p>Problemas mais comuns:</p>
+            
+            <ul class="emoji-list">
+                <li data-emoji="⚖️">Viés algorítmico em recrutamento ou atendimento</li>
+                <li data-emoji="🔍">Falta de supervisão, onde a IA decide tudo sem checagem</li>
+                <li data-emoji="🤔">Desconfiança do cliente quando não sabe que está falando com um robô</li>
+            </ul>
+        </div>
+        
+        <h2>🔑 Como Pequenos Negócios Podem se Adaptar e Vencer com IA</h2>
+        
+        <h3>🎓 Requalificação: Aprender o Básico de IA</h3>
+        
+        <p>
+            Hoje já existem cursos gratuitos e acessíveis sobre IA para empreendedores.
+        </p>
+        
+        <p>
+            Exemplo: o Sebrae Play oferece capacitações em:
+        </p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="💬">Prompt engineering (para usar IA como o ChatGPT com mais precisão)</li>
+            <li data-emoji="📊">Análise de dados para negócios</li>
+            <li data-emoji="📱">Ferramentas de automação para WhatsApp, marketing e vendas</li>
+        </ul>
+        
+        <p>
+            E o impacto é real: PMEs que treinaram sua equipe reduziram a rotatividade e cresceram mais rápido.
+        </p>
+        
+        <h3>🤝 Modelos Híbridos: Humanos + IA</h3>
+        
+        <p>
+            A chave do sucesso está no equilíbrio.
+        </p>
+        
+        <p>
+            Modelos que funcionam:
+        </p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="💬">Chatbots fazem o primeiro atendimento → você cuida dos casos importantes</li>
+            <li data-emoji="📝">IA cria o esboço do post → você ajusta e humaniza</li>
+            <li data-emoji="📈">Algoritmos mostram oportunidades → você toma a decisão final</li>
+        </ul>
+        
+        <p>
+            Ou seja: não é IA vs. você. É IA + você.
+        </p>
+        
+        <h3>🧭 Governança e Transparência</h3>
+        
+        <p>
+            Mesmo que seu negócio seja pequeno, tenha clareza nas regras de uso da IA:
+        </p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="🔍">Avise seu cliente quando estiver falando com um robô</li>
+            <li data-emoji="📊">Monitore o desempenho da IA regularmente</li>
+            <li data-emoji="👥">Remaneje funções: quem fazia atendimento pode virar analista, criador de conteúdo ou operador de IA</li>
+        </ul>
+        
+        <h2>🔚 Conclusão: IA Não É o Futuro — É o Agora</h2>
+        
+        <p>
+            A inteligência artificial está batendo na sua porta. Ela pode ser sua aliada ou sua concorrente. A escolha é sua.
+        </p>
+        
+        <p>
+            Você pode:
+        </p>
+        
+        <ul class="emoji-list">
+            <li data-emoji="💰">Reduzir custos</li>
+            <li data-emoji="😀">Melhorar atendimento</li>
+            <li data-emoji="📈">Vender mais</li>
+            <li data-emoji="🧠">Tomar decisões mais inteligentes</li>
+            <li data-emoji="⏱️">Trabalhar menos e com mais qualidade</li>
+        </ul>
+        
+        <p>
+            Ou...
+        </p>
+        
+        <p>
+            Ignorar e correr o risco de ficar para trás enquanto o mercado avança.
+        </p>
+        
+        <p>
+            Se até pequenos negócios estão inovando com IA, o que está te segurando?
+        </p>
+        
+        <p>
+            <strong>Não espere mais. A revolução já começou — e ela é acessível, simples e poderosa.</strong>
+        </p>
+        
+        <div class="source-box">
+            <h4>📚 Fontes e Leitura Complementar</h4>
+            <ol class="source-list">
+                <li><a href="#">O Tempo: Como a IA já ajuda pequenas empresas</a></li>
+                <li><a href="#">ANEFAC: IA e automação para PMEs</a></li>
+                <li><a href="#">RIUSPJR: IA para pequenos negócios</a></li>
+                <li><a href="#">LinkedIn: Como a IA está transformando PMEs</a></li>
+                <li><a href="#">Datastone: Blog 2024</a></li>
+                <li><a href="#">Revista Algoritmo: Ética em IA para pequenas empresas</a></li>
+                <li><a href="#">Resultados Inteligentes: IA no varejo</a></li>
+                <li><a href="#">Microsoft: Blog sobre pequenas empresas e IA</a></li>
+                <li><a href="#">Shopify: IA no e-commerce</a></li>
+                <li><a href="#">Google Cloud: AI/ML para PMEs</a></li>
+                <li><a href="#">Mailchimp: Ferramentas de IA para marketing</a></li>
+                <li><a href="#">Agilize: IA na contabilidade</a></li>
+                <li><a href="#">Loggi: IA na logística</a></li>
+                <li><a href="#">AWS: Machine learning para pequenos negócios</a></li>
+                <li><a href="#">ManyChat: WhatsApp Business chatbots</a></li>
+                <li><a href="#">ContaAzul: IA na contabilidade</a></li>
+                <li><a href="#">HostGator: Uso de IA nas PMEs</a></li>
+                <li><a href="#">Ethos Digital: Guia ético para empresas que usam IA</a></li>
+                <li><a href="#">Neil Patel: Automação de marketing para PMEs</a></li>
+                <li><a href="#">NexoData: Chatbots e retenção de pacientes</a></li>
+            </ol>
+        </div>
+        
+        <div class="social-share">
+            <a href="#" class="social-button twitter">T</a>
+            <a href="#" class="social-button facebook">F</a>
+            <a href="#" class="social-button linkedin">L</a>
+            <a href="#" class="social-button whatsapp">W</a>
+        </div>
+    </main>
+
+    <section class="article-cta">
+        <div class="container">
+            <h3>Aprenda a Implementar IA no Seu Negócio</h3>
+            <p>Quer descobrir como aplicar essas estratégias de IA no seu próprio empreendimento e garantir que seu negócio se mantenha competitivo? Nosso workshop te mostra exatamente como começar, mesmo sem conhecimento técnico.</p>
+            <a href="index.html#register" class="btn-action">GARANTIR MINHA VAGA NO WORKSHOP</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://github.com/nelsonvieiramartins/site_ai/blob/main/logobranca.png?raw=true" alt="Brave Education Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html#home">Início</a></li>
+                            <li><a href="index.html#features">Para quem é</a></li>
+                            <li><a href="index.html#workshop">O que você vai aprender</a></li>
+                            <li><a href="index.html#about">Quem somos</a></li>
+                            <li><a href="index.html#register">Garantir vaga</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="index.html#faq">Perguntas frequentes</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>📧 Suporte: <a href="mailto:contato@braveeducation.com.br">contato@braveeducation.com.br</a></p>
+                <p>🔒 Compra 100% segura · Termos de uso · Política de privacidade</p>
+                <p>&copy; 2024 Brave Education. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#4c34e0"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#6615dd",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
